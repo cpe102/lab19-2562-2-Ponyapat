@@ -10,6 +10,8 @@ int main(){
 	int p = 0, m = 0;
 	while(true){
 		mons.newTurn();	
+		
+		
 		hero.newTurn();			
 		mons.showStatus();
 		drawScene(player_action,p,monster_action,m);
@@ -31,6 +33,7 @@ int main(){
 		
 		if(player_action == 'A') p = hero.attack(mons); 
 		if(monster_action == 'A') m = mons.attack(hero); 
+		
 		
 		if(hero.isDead()){
 			drawScene(player_action,p,monster_action,m);
